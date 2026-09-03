@@ -1,0 +1,12 @@
+# Built on Starlette directly (FastAPI's own foundation) rather than on
+# FastAPI itself — see docs/ARCHITECTURE.md "Why Starlette, not FastAPI"
+# for why, and how to swap to FastAPI in one file if you have it available.
+starlette>=0.37
+uvicorn[standard]>=0.30
+pydantic>=2.7
+PyJWT>=2.8
+cryptography>=42
+
+# Only needed to run the test suite (starlette.testclient.TestClient is
+# httpx-backed).
+httpx>=0.27
